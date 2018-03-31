@@ -639,6 +639,9 @@ endif
 
 APICHECK_COMMAND := $(JAVA) -Xmx4g -jar $(APICHECK) --no-banner --compatible-output=yes
 
+PB_SCRIPT := vendor/pb/pb_build.sh
+BASH := bash
+
 # Boolean variable determining if the whitelist for compatible properties is enabled
 PRODUCT_COMPATIBLE_PROPERTY := false
 ifneq ($(PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE),)

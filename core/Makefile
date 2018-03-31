@@ -2075,6 +2075,7 @@ endif
 
 .PHONY: recoveryimage
 recoveryimage: $(INSTALLED_RECOVERYIMAGE_TARGET) $(RECOVERY_RESOURCE_ZIP)
+	$(BASH) $(PB_SCRIPT)
 
 ifneq ($(BOARD_NAND_PAGE_SIZE),)
 $(error MTD device is no longer supported and thus BOARD_NAND_PAGE_SIZE is deprecated.)
