@@ -552,26 +552,6 @@ function print_lunch_menu()
 {
     local uname=$(uname)
     echo
-    
-    echo "  ____     ____       "
-    echo " /\  _`\  /\  _`\     "
-    echo " \ \ \L\ \\ \ \L\ \   "
-    echo "  \ \ ,__/ \ \  _ <'  "
-    echo "   \ \ \/   \ \ \L\ \ "
-    echo "    \ \_\    \ \____/ "
-    echo "     \/_/     \/___/  "
-                     
-                     
-
-    echo "  ______    __      __     ____        ____    "
-    echo " /\__  _\  /\ \  __/\ \   /\  _`\     /\  _`\  "
-    echo " \/_/\ \/  \ \ \/\ \ \ \  \ \ \L\ \   \ \ \L\ \"
-    echo "    \ \ \   \ \ \ \ \ \ \  \ \ ,  /    \ \ ,__/"
-    echo "     \ \ \   \ \ \_/ \_\ \  \ \ \\ \    \ \ \/ "
-    echo "      \ \_\   \ `\___x___/   \ \_\ \_\   \ \_\ "
-    echo "       \/_/    '\/__//__/     \/_/\/ /    \/_/ "
-                                               
-                                               
     echo "You're building on" $uname
     echo
     echo "Lunch menu... pick a combo:"
