@@ -674,6 +674,7 @@ function lunch()
     fi
     export CUSTOM_BUILD
 
+    export PB_OFFICIAL_CH=$(get_build_var PB_OFFICIAL)
     export TARGET_PRODUCT=$product
     export TARGET_BUILD_VARIANT=$variant
     export TARGET_BUILD_TYPE=release
@@ -1686,7 +1687,7 @@ function make()
         color_reset=""
     fi
     echo
-    if [ $ret -eq 0 ] ; then
+    if [ $ret -eq 0 ] && [ "$?" -eq 0 ] ; ; then
         echo -n "${color_success}#### make completed successfully "
     else
         echo -n "${color_failed}#### make failed to build some targets "
