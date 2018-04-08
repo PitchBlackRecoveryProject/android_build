@@ -1692,6 +1692,9 @@ function make()
     else
         echo -n "${color_failed}#### make failed to build some targets "
     fi
+export HOURS=$hours
+export MINS=$mins
+export SECS=$secs
     if [ $hours -gt 0 ] ; then
         printf "(%02g:%02g:%02g (hh:mm:ss))" $hours $mins $secs
     elif [ $mins -gt 0 ] ; then
