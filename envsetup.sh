@@ -1687,7 +1687,7 @@ function make()
         color_reset=""
     fi
     echo
-    if [ $ret -eq 0 ] && [ "$?" -eq 0 ] ; ; then
+    if [ $ret -eq 0 ] && [ "$?" -eq 0 ]; then
         echo -n "${color_success}#### make completed successfully "
     else
         echo -n "${color_failed}#### make failed to build some targets "
