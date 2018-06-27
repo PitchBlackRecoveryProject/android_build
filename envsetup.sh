@@ -683,6 +683,7 @@ function lunch()
     export CUSTOM_BUILD
 
     export PB_OFFICIAL_CH=$(get_build_var PB_OFFICIAL)
+    export PB_FORCE_DD_FLASH=$(get_build_var PB_FORCE_DD_FLASH)
     export TARGET_PRODUCT=$product
     export TARGET_BUILD_VARIANT=$variant
     export TARGET_PLATFORM_VERSION=$(get_build_var TARGET_PLATFORM_VERSION)
