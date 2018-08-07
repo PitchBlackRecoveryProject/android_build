@@ -1682,9 +1682,9 @@ function _wrap_build()
         color_reset=""
     fi
     echo
-    export HOURS=$(($tdiff / 3600 ))
-    export MINS=$((($tdiff % 3600) / 60))
-    export SECS=$(($tdiff % 60))
+    export HOURS=$hours
+    export MINS=$mins
+    export SECS=$secs
     if [ $ret -eq 0 ] && [ "$?" -eq 0 ] ; then
         echo -n "${color_success}#### build completed successfully "
     else
