@@ -25,7 +25,6 @@ _vendor_owner_whitelist := \
         fpc \
         google \
         htc \
-        huawei \
         imgtec \
         invensense \
         intel \
