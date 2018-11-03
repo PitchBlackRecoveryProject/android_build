@@ -736,6 +736,7 @@ function lunch()
     fi
 
     export PB_OFFICIAL_CH=$(get_build_var PB_OFFICIAL)
+    export AB_OTA_UPDATER=$(get_build_var AB_OTA_UPDATER)
     export TARGET_PRODUCT=$product
     export TARGET_BUILD_VARIANT=$variant
     export TARGET_PLATFORM_VERSION=$(get_build_var TARGET_PLATFORM_VERSION)
