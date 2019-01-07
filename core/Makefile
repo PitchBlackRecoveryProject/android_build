@@ -147,6 +147,7 @@ FINAL_DEFAULT_PROPERTIES := \
 ifndef property_overrides_split_enabled
   FINAL_DEFAULT_PROPERTIES += \
       $(call collapse-pairs, $(FINAL_VENDOR_DEFAULT_PROPERTIES))
+endif
 FINAL_DEFAULT_PROPERTIES := $(call uniq-pairs-by-first-component, \
     $(FINAL_DEFAULT_PROPERTIES),=)
 
