@@ -890,7 +890,7 @@ ifdef PRODUCT_SHIPPING_API_LEVEL
 endif
 
 # The default key if not set as LOCAL_CERTIFICATE
-include $(TOPDIR)vendor/omni/build/core/certs.mk
+include $(TOPDIR)vendor/pb/build/core/certs.mk
 ifdef PRODUCT_DEFAULT_DEV_CERTIFICATE
   DEFAULT_SYSTEM_DEV_CERTIFICATE := $(PRODUCT_DEFAULT_DEV_CERTIFICATE)
 else
@@ -1098,6 +1098,6 @@ include $(BUILD_SYSTEM)/soong_config.mk
 endif
 
 # Rules for QCOM targets
-include $(TOPDIR)vendor/omni/build/core/qcom_target.mk
+include $(TOPDIR)vendor/pb/build/core/qcom_target.mk
 
 include $(BUILD_SYSTEM)/dumpvar.mk
