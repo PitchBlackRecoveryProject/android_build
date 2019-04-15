@@ -230,7 +230,7 @@ include $(BUILD_SYSTEM)/envsetup.mk
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
-include vendor/omni/config/BoardConfigOmni.mk
+-include vendor/omni/config/BoardConfigOmni.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
@@ -761,7 +761,7 @@ ifdef PRODUCT_SHIPPING_API_LEVEL
 endif
 
 # The default key if not set as LOCAL_CERTIFICATE
-include $(TOPDIR)vendor/omni/build/core/certs.mk
+include $(TOPDIR)vendor/pb/build/core/certs.mk
 ifdef PRODUCT_DEFAULT_DEV_CERTIFICATE
   DEFAULT_SYSTEM_DEV_CERTIFICATE := $(PRODUCT_DEFAULT_DEV_CERTIFICATE)
 else
@@ -1178,6 +1178,6 @@ DEFAULT_DATA_OUT_MODULES := ltp $(ltp_packages) $(kselftest_modules)
 .KATI_READONLY := DEFAULT_DATA_OUT_MODULES
 
 # Rules for QCOM targets
-include vendor/omni/build/core/qcom_target.mk
+include vendor/pb/build/core/qcom_target.mk
 
 include $(BUILD_SYSTEM)/dumpvar.mk
