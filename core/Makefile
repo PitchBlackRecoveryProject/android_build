@@ -1680,14 +1680,8 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 	   $(TARGET_RELEASETOOL_OTA_FROM_TARGET_ADDITIONAL_ARGS) \
 	   $(BUILT_TARGET_FILES_PACKAGE) $@
 
-CUSTOM_TARGET_PACKAGE := $(PRODUCT_OUT)/custom-$(ROM_VERSION).zip
-
-.PHONY: otapackage bacon
+.PHONY: otapackage
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-bacon: otapackage
-	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(CUSTOM_TARGET_PACKAGE)
-	$(hide) $(MD5SUM) $(CUSTOM_TARGET_PACKAGE) > $(CUSTOM_TARGET_PACKAGE).md5sum
-	@echo -e ${PRT_CPL}"Package complete: $(CUSTOM_TARGET_PACKAGE)"${CL_RST}
 
 endif    # recovery_fstab is defined
 endif    # TARGET_NO_KERNEL != true
