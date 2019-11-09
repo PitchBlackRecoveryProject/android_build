@@ -512,7 +512,6 @@ function brunch()
 function breakfast()
 {
     target=$1
-    local variant=$2
     CUSTOM_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
@@ -533,10 +532,7 @@ function breakfast()
             lunch $target
         else
             # This is probably just the omni model name
-            if [ -z "$variant" ]; then
-                variant="userdebug"
-            fi
-            lunch omni_$target-$variant
+            lunch omni_$target-userdebug
         fi
     fi
     return $?
