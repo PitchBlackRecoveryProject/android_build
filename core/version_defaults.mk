@@ -125,7 +125,7 @@ ifndef PLATFORM_VERSION_CODENAME
     $(subst $(space),$(comma),$(strip $(PLATFORM_VERSION_ALL_CODENAMES)))
 
 endif
-.KATI_READONLY := \
+. KATI_READONLY := \
   PLATFORM_VERSION_CODENAME \
   PLATFORM_VERSION_ALL_CODENAMES
 
@@ -136,7 +136,6 @@ ifndef PLATFORM_VERSION
       PLATFORM_VERSION := $(PLATFORM_VERSION_CODENAME)
   endif
 endif
-.KATI_READONLY := PLATFORM_VERSION
 
 ifndef PLATFORM_SDK_VERSION
   # This is the canonical definition of the SDK version, which defines
