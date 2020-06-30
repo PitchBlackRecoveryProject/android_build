@@ -230,7 +230,7 @@ include $(BUILD_SYSTEM)/envsetup.mk
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
--include vendor/omni/config/BoardConfigOmni.mk
+-include vendor/pb/config/BoardConfigOmni.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
