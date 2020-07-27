@@ -716,7 +716,7 @@ else
 MD5SUM:=md5sum
 endif
 
-PB_SCRIPT := vendor/pb/pb_build.sh
+PB_SCRIPT := vendor/utils/pb_build.sh
 BASH := bash
 
 APICHECK_CLASSPATH_ENTRIES := \
