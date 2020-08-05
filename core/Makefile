@@ -328,7 +328,7 @@ ifeq (,$(strip $(BUILD_FINGERPRINT)))
   else
     BF_BUILD_NUMBER := $(file <$(BUILD_NUMBER_FILE))
   endif
-  ifeq (,$(strip $(OMNI_BUILD_FINGERPRINT)))
+  ifneq (,$(strip $(OMNI_BUILD_FINGERPRINT)))
     BUILD_FINGERPRINT := $(OMNI_BUILD_FINGERPRINT)
   else
     BUILD_FINGERPRINT := $(PRODUCT_BRAND)/$(TARGET_PRODUCT)/$(TARGET_DEVICE):$(PLATFORM_VERSION)/$(BUILD_ID)/$(BF_BUILD_NUMBER):$(TARGET_BUILD_VARIANT)/$(BUILD_VERSION_TAGS)
@@ -4536,11 +4536,10 @@ $(SYMBOLS_ZIP): $(SOONG_ZIP)
 # -----------------------------------------------------------------
 # A zip of the coverage directory.
 #
-name := $(TARGET_PRODUCT)
+name := gcov-report-files-all
 ifeq ($(TARGET_BUILD_TYPE),debug)
 name := $(name)_debug
 endif
-name := $(name)-coverage-$(FILE_NAME_TAG)
 COVERAGE_ZIP := $(PRODUCT_OUT)/$(name).zip
 ifndef TARGET_BUILD_APPS
 $(COVERAGE_ZIP): $(INSTALLED_SYSTEMIMAGE_TARGET) \
