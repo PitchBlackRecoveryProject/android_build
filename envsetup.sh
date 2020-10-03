@@ -682,8 +682,8 @@ function lunch()
     local product variant_and_version variant version
     product=${selection%%-*} # Trim everything after first dash
     variant_and_version=${selection#*-} # Trim everything up to first dash
-    export PB_CODE=$(echo $product | cut -d'_' -f2)
-    export PB_VENDOR_CODE=$(echo device/*/$(echo $product | cut -d'_' -f2) | awk -F '/' '{print $2}')
+    export PB_CODE=$(echo $product | cut -d'_' -f2-)
+    export PB_VENDOR_CODE=$(echo device/*/$(echo $product | cut -d'_' -f2-) | awk -F '/' '{print $2}')
     if [ "$variant_and_version" != "$selection" ]; then
         variant=${variant_and_version%%-*}
         if [ "$variant" != "$variant_and_version" ]; then
